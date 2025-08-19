@@ -1,0 +1,120 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.6;
+  color: #23272a;
+  background: #fff;
+}
+
+img { max-width: 100%; display: block; }
+
+/* HERO */
+.hero {
+  background: url("/assets/images/header.png") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 780px;
+  margin: 0 auto 30px;
+  font-size: 1.1rem;
+}
+
+.hero .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero img {
+  height: auto;
+  width: auto;
+  max-width: 100%; 
+}
+
+.hero .button-1 {
+  max-width: 205px; 
+}
+
+.hero .button-2 {
+  max-width: 281px; 
+}
+
+
+/* SECTIONS */
+.section { padding: 72px 20px; }
+.section.gray { background: #f6f6f6; }
+
+.content {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.content.reverse { flex-direction: row-reverse; }
+.content.column { flex-direction: column; text-align: center; }
+
+.image { flex: 1 1 48%; min-width: 300px; }
+.text { flex: 1 1 44%; min-width: 300px; }
+
+.text h2 {
+  font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.2rem);
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.text p {
+  font-family: "Open Sans", sans-serif;
+  color: #4f545c;
+  font-size: 1rem;
+}
+
+/* SECTION 4 */
+.text.narrow { max-width: 760px; }
+.image.wide { width: 100%; max-width: 1120px; }
+
+.title-big {
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+  font-size: clamp(1.8rem, 1.2rem + 2.2vw, 2.4rem);
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer {
+  background: #23272a;
+  color: #fff;
+  padding: 36px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer img { width: 230px; height: 63px; }
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+  .content { gap: 32px; }
+}
+@media (max-width: 700px) {
+  .content, .content.reverse { flex-direction: column; text-align: center; }
+  .section { padding: 48px 16px; }
+  .hero { padding: 64px 16px; }
+  .hero-buttons img { max-width: 280px; }
+}
+@media (max-width: 430px) {
+  .title-big { line-height: 1.1; }
+  .text p { font-size: .98rem; }
+}
